@@ -7,7 +7,7 @@ export const getEmployees = async () => {
     name,
     email,
     role
-FROM "admin"."Employees"
-WHERE is_active = true
-ORDER BY name;`;
+    FROM "admin"."Employees"
+    WHERE is_active = true
+    ORDER BY name;`;
 }
