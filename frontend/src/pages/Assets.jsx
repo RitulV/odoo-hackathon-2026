@@ -1,6 +1,6 @@
 import React from "react";
-import { Page } from "@/assets/Page";
 import { LandingCards } from "@/components/layout-card";
+import { Page } from "@/utils/Page";
 
 const Assets = () => {
   return (

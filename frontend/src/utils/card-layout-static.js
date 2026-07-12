@@ -1,4 +1,4 @@
-import { Page } from "../assets/Page";
+import { Page } from "./Page";
 import { LayoutDashboard, Boxes, Users, Tags, Search } from "lucide-react";
 
 export const data = {
@@ -27,13 +27,13 @@ export const data = {
       title: "Asset Categories",
       description: "Create categories for your assets",
       icon: Tags,
-      to: "assets/categories",
+      to: "/assets/categories",
     },
     {
       title: "View Assets",
       description: "Search, filter, and inspect individual assets.",
       icon: Search,
-      to: "assets/search",
+      to: "/assets/search",
     },
   ],
 };

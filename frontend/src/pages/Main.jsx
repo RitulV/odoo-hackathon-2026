@@ -1,4 +1,4 @@
-import { Page } from "@/assets/Page";
+import { Page } from "@/utils/Page";
 import { LandingCards } from "@/components/layout-card";
 import React from "react";
 
