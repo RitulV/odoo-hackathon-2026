@@ -33,6 +33,19 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
+              {/* Home */}
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild tooltip="Home">
+                  <NavLink
+                    to="/home"
+                    className={({ isActive }) => cn(linkBase)}
+                  >
+                    <LayoutDashboard className="h-4 w-4" />
+                    <span>Home</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
               {/* Dashboard */}
               <SidebarMenuItem>
                 <SidebarMenuButton asChild tooltip="Dashboard">

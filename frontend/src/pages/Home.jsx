@@ -1,4 +1,4 @@
-import React, { useDebugValue, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Outlet, createHashRouter, useNavigate } from "react-router-dom";
 Header
 import Main from "./Main";

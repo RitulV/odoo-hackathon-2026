@@ -1,9 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { useSidebar } from "@/components/ui/sidebar";
 import { useRef, useState } from "react";
 import { useClickOutsideMultiple } from "../hooks/useClickOutsideMultiple";
 
 const Header = () => {
+  const location = useLocation();
+
   let urlBreakdown = location.pathname
     .split("/")
     .filter(Boolean)

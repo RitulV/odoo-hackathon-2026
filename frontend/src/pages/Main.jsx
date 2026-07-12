@@ -1,11 +1,13 @@
-import React from 'react'
+import { Page } from "@/assets/Page";
+import { LandingCards } from "@/components/layout-card";
+import React from "react";
 
 const Main = () => {
   return (
     <div>
-      Main Landing Page
+      <LandingCards pageProp={Page.DASHBOARD} />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
