@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useSidebar } from "@/components/ui/sidebar";
+import { useRef, useState } from "react";
 import { useClickOutsideMultiple } from "../hooks/useClickOutsideMultiple";
 
 const Header = () => {
@@ -14,13 +14,13 @@ const Header = () => {
           (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(),
         )
         .join(" "),
-  );
+    );
 
   const breadcrumb =
     urlBreakdown.length > 0 ? urlBreakdown.join(" > ") : "Home";
 
   const [profileOpen, setProfileOpen] = useState(false);
-
+  const { toggleSidebar } = useSidebar();
   const imgRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -29,8 +29,13 @@ const Header = () => {
   return (
     <div>
       <div className="m-1.5 mx-5 max-h-fit w-full flex justify-between p-0.5 text-[#CBD5E1]">
-        <div className="flex justify-center align-middle mx-1.25 p-1.25 font-[Space_Grotesk] font-[400px] text-md/loose text-shadow-lg/30 bg-slate-800 rounded-xl hover:inset-shadow-sm hover:inset-shadow-gray-700 hover:text-shadow-none opacity-70 hover:opacity-100">
-          <span className="rounded-xl flex justify-center p-1 m-1">{breadcrumb}</span>
+        <div
+          onClick={toggleSidebar}
+          className="cursor-pointer flex justify-center align-middle mx-1.25 p-1.25 font-[Space_Grotesk] font-[400px] text-md/loose text-shadow-lg/30 bg-slate-800 rounded-xl hover:inset-shadow-sm hover:inset-shadow-gray-700 hover:text-shadow-none opacity-70 hover:opacity-100"
+        >
+          <span className="rounded-xl flex justify-center p-1 m-1">
+            {breadcrumb}
+          </span>
         </div>
 
         <div className="relative pr-5">
